@@ -17,10 +17,10 @@ const contactsSlice = createSlice({
         addContact(state, action) {
             state.items = [...state.items, action.payload]
         },
-        deletreContact(state, action) {
-            const index = state.items.findInndex((item) => item.id === action.payload);
+        deleteContact(state, action) {
+            const index = state.items.findIndex((item) => item.id === action.payload);
             if (index !== -1) { 
-                state.items.slice(index, 1);
+                state.items.splice(index, 1);
             };
         }
     }
