@@ -11,7 +11,7 @@ const FeedbackSchema = Yup.object().shape({
   number: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required"),
 })
 
-export default function ContactForm({ onAdd }) {
+export default function ContactForm() {
     const dispatch = useDispatch();
 
     const handleSubmit = (values, action) => {
